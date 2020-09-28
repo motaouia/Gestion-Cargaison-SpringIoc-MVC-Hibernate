@@ -32,8 +32,6 @@ public class Cargaison  implements Serializable{
 	private double distanceParcourue;
 	private Date dateLivraison;
 	
-	@OneToMany
-	@JoinColumn(name = "ID_MARCH")
+	@OneToMany(mappedBy = "cargaison")
 	private Set<Marchandise> marchanides = new HashSet<Marchandise>();
-
 }
